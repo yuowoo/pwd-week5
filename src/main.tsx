@@ -1,7 +1,11 @@
+/* src/main.tsx */
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import App from './App'
+
+const root = document.getElementById('root');
+if (!root) throw new Error('앱을 표시할 root 요소를 찾을 수 없습니다.')
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
